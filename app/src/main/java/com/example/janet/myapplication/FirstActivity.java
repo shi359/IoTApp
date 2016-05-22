@@ -21,6 +21,7 @@ public class FirstActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(FirstActivity.this, MainActivity.class);
+                startActivity(i);
             }
         });
 
