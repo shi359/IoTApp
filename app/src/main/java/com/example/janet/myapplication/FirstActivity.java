@@ -2,6 +2,7 @@ package com.example.janet.myapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -11,19 +12,27 @@ import android.widget.ImageButton;
 
 public class FirstActivity extends ActionBarActivity {
     ImageButton start;
+    View  main;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_first);
+        main = getLayoutInflater().inflate(R.layout.activity_first, null);
+        main.setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
 
-        start = (ImageButton) findViewById(R.id.start);
-        start.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_first);
+        Handler handler = new Handler();
+
+        handler.postDelayed(new Runnable() {
             @Override
-            public void onClick(View v) {
+            public void run() {
                 Intent i = new Intent(FirstActivity.this, MainActivity.class);
                 startActivity(i);
             }
-        });
+        },2000);
+
+
+
 
     }
 
@@ -49,4 +58,6 @@ public class FirstActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
 }
