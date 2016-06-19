@@ -1,148 +1,178 @@
-<ScrollView
+<TableLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffaf47">
+    android:background="#ffffaf47"
+    android:orientation="horizontal">
 
-    <RelativeLayout
+    <TableRow
         android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:textAlignment="center"
+        android:layout_marginTop="30dp">
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="檢測結果"
+            android:id="@+id/textView2"
+            android:textSize="40dp"
+            android:layout_marginLeft="100dp"
+            android:textColor="#000000" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        android:paddingBottom="@dimen/activity_vertical_margin"
-        android:touchscreenBlocksFocus="false">
+        android:nestedScrollingEnabled="true"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="-5dp"
+        android:baselineAligned="false">
 
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:id="@+id/tableRow"
-            android:layout_below="@+id/tableRow3"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="足部舒適度"
-                android:id="@+id/btn_comfort"
+                android:text="目前狀態"
+                android:id="@+id/textView3"
+                android:textIsSelectable="false"
                 android:textSize="25dp"
-                android:layout_marginTop="42dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true" />
+                android:padding="5dp"
+                android:layout_marginLeft="15dp"
+                android:textColor="#000000" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="52dp"
+                android:id="@+id/condition"
+                android:padding="10dp"
                 android:textSize="25dp"
-                android:text="test"
+                android:layout_marginLeft="20dp"
+                android:textColor="#000000" />
+        </LinearLayout>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="舒適度"
+                android:id="@+id/textView6"
+                android:textSize="25dp"
+                android:padding="5dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:id="@+id/comfort"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:paddingLeft="42dp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:id="@+id/tableRow3"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="124dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="足部壓力"
-                android:id="@+id/btn_pressure"
+                android:padding="5dp"
+                android:layout_marginLeft="50dp"
                 android:textSize="25dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_marginTop="42dp"
-                android:layout_column="0"/>
+                android:textColor="#000000" />
+        </LinearLayout>
+    </TableRow>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="25dp"
-                android:text="test"
-                android:id="@+id/pressure"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_marginTop="42dp"
-                android:layout_column="0"
-                android:paddingLeft="75dp"
-                android:singleLine="true" />
-        </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="-5dp">
 
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_below="@+id/tableRow"
-            android:layout_alignRight="@+id/tableRow"
-            android:layout_alignEnd="@+id/tableRow"
-            android:layout_marginRight="97dp"
-            android:layout_marginEnd="97dp"
-            android:id="@+id/tableRow2">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="整體舒適度"
-                android:id="@+id/btn_all"
-                android:textSize="25dp"
-                android:layout_marginTop="42dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:textSize="25dp"
-                android:text="Hello"
-                android:id="@+id/all"
-                android:layout_marginTop="42dp"
-                android:paddingLeft="50dp" />
-
-        </TableRow>
-
-        <TableRow
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true">
+            android:layout_marginTop="20dp">
 
-        </TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="健康度"
+                android:id="@+id/change_health"
+                android:padding="5dp"
+                android:textSize="25dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/health"
+                android:layout_marginLeft="55dp"
+                android:textSize="25dp"
+                android:textColor="#000000" />
+        </LinearLayout>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="-10dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="整體評分"
+                android:id="@+id/textView9"
+                android:layout_marginLeft="20dp"
+                android:padding="5dp"
+                android:textSize="25dp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/all"
+                android:padding="5dp"
+                android:textSize="25dp"
+                android:layout_marginLeft="28dp"
+                android:textColor="#000000"
+                android:text="尚無資料" />
+        </LinearLayout>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp">
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#ffffaf47"
-            android:id="@+id/imageButton"
-            android:src="@mipmap/again02"
-            android:layout_below="@+id/tableRow2"
-            android:layout_marginTop="50dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:background="@mipmap/again02"
+            android:id="@+id/btn"
+            android:layout_column="1"
+            android:layout_gravity="bottom" />
+    </TableRow>
 
-        <!--<Button-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="New Button"-->
-            <!--android:id="@+id/btn"-->
-            <!--android:layout_below="@+id/tableRow2"-->
-            <!--android:layout_marginTop="50dp"-->
-            <!--android:layout_alignParentRight="true"-->
-            <!--android:layout_alignParentEnd="true"/>-->
-
-    </RelativeLayout>
-</ScrollView>
+</TableLayout>

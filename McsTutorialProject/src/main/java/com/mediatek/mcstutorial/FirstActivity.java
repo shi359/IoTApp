@@ -1,9 +1,9 @@
 package com.mediatek.mcstutorial;
 
-import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -11,18 +11,17 @@ import android.view.View;
 import android.widget.ImageButton;
 
 
-public class FirstActivity extends ActionBarActivity {
+public class FirstActivity extends FragmentActivity {
     ImageButton start;
     View  main;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         main = getLayoutInflater().inflate(R.layout.activity_first, null);
         main.setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
-        setContentView(R.layout.activity_first);
 
+        setContentView(R.layout.activity_first);
         Handler handler = new Handler();
 
         handler.postDelayed(new Runnable() {
